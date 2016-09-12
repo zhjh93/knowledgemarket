@@ -2,10 +2,236 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>shopping</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../public/stylesheets/bootstrap.css">
+    <title>购物车</title>
+    <style>
+        body {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+        .shopcattop{
+            width: 100%;
+            height: 50px;
+        }
+        .catchoose,.catname,.catprice,.catdelete{
+            float: left;
+        }
+        .catchoose{
+            width: 10%;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .catname{
+            width: 60%;
+            height: 50px;
+            padding-top: 15px;
+            text-align: center;
+        }
+        .catprice{
+            width: 20%;
+            height: 50px;
+            padding-top: 15px;
+            text-align: center;
+        }
+        .catdelete{
+            width: 10%;
+            height: 50px;
+            padding-top: 15px;
+            text-align: center;
+        }
+        .goods{
+            width: 100%;
+            height: 200px;
+            border-top: 1px solid silver;
+        }
+        .goodschoose{
+            width: 10%;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .goodspicture{
+            width: 40%;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .goodsname{
+            width: 20%;
+            height: 200px;
+            overflow:hidden;
+            text-align: center;
+            line-height: 200px;
+        }
+        .goodsprice{
+            width: 20%;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .goodsdelete{
+            width: 10%;
+            height: 200px;
+            text-align: center;
+            padding-top: 90px;
+        }
+        #moneybox{
+            position: absolute;
+            left: 50px;
+            top: 10px;
+        }
+        .goodschoose,.goodspicture,.goodsname,.goodsprice,.goodsdelete{
+            float: left;
+        }
+        @media screen and (max-width: 1024px){
+
+        }
+        @media screen and (max-width: 768px){
+            .goods{
+                height: 300px;
+            }
+            .catprice{
+                display: none;
+            }
+            .catname{
+                width: 70%;
+            }
+            .catdelete{
+                width: 20%;
+            }
+            .goodspicture{
+                width: 90%;
+            }
+            .goodsname{
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                overflow:hidden
+            }
+            .goodsprice{
+                width: 80%;
+                height: 50px;
+                line-height: 50px;
+            }
+            .goodsdelete{
+                width: 20%;
+                height: 50px;
+                padding-top: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>Hello Word!</h1>
-c
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+        <a href="#" class="navbar-brand" style="margin: 0px;padding: 0px">
+            <img src="../public/images/xiangmugongchang2.png" style="width: 100px;height: 50px">
+        </a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div id="myCollapse" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">购物车</a></li>
+            <li><a href="#">个人中心</a></li>
+        </ul>
+    </div>
+</div>
+<div id="shop">
+<div class="container">
+    <div id="shopcat">
+    <div class="shopcattop">
+        <div class="catchoose"><input name="全部选择" type="checkbox" value="全选" class="selectall"></div>
+        <div class="catname">课程名称</div>
+        <div class="catprice">单价</div>
+        <div class="catdelete"><button class="alldel">删除</button></div>
+    </div>
+    <div class="goods">
+        <div class="goodschoose"><input name="选择" type="checkbox" class="select"></div>
+        <div class="goodspicture"><img src="../public/images/1.jpg"></div>
+        <div class="goodsname">HTML5全套课程精讲</div>
+        <div class="goodsprice">&yen;56.00</div>
+        <div class="goodsdelete"><button class="del">删除</button></div>
+    </div>
+    <div class="goods">
+        <div class="goodschoose"><input name="选择" type="checkbox" class="select"></div>
+        <div class="goodspicture"><img src="../public/images/3.jpg"></div>
+        <div class="goodsname">前端工程师之HTML+CSS</div>
+        <div class="goodsprice">&yen;58.00</div>
+        <div class="goodsdelete"><button class="del">删除</button></div>
+    </div>
+    <div class="goods">
+        <div class="goodschoose"><input name="选择" type="checkbox" class="select"></div>
+        <div class="goodspicture"><img src="../public/images/9.jpg"></div>
+        <div class="goodsname">HTML5基础——表严肃讲堂</div>
+        <div class="goodsprice">&yen;56.00</div>
+        <div class="goodsdelete"><button class="del">删除</button></div>
+    </div>
+    <div class="goods">
+        <div class="goodschoose"><input name="选择" type="checkbox" class="select"></div>
+        <div class="goodspicture"><img src="../public/images/11.jpg"></div>
+        <div class="goodsname">JavaScript</div>
+        <div class="goodsprice">&yen;56.00</div>
+        <div class="goodsdelete"><button class="del">删除</button></div>
+    </div>
+</div>
+</div>
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <div class="container">
+            <div id="moneybox">总金额为：&yen;<span id="money"></span> </div>
+            <button type="button" class="btn btn-default navbar-btn" style="position: absolute;right: 20px;bottom: 5px">结算</button>
+        </div>
+    </nav>
+</div>
 </body>
+<script src="../public/javascripts/jquery-3.1.0.js"></script>
+<script src="../public/javascripts/bootstrap.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".del").click(function(){
+            if(confirm("你确定要删除此商品吗？"))
+                $(this).parent().parent().remove();
+            summoney()
+        });
+        $(".alldel").click(function(){
+            if(confirm("你确定要删除所有商品吗？"))
+                $(".goods").remove();
+            summoney()
+        });
+        $(".selectall").click(function() {
+            $("input[name='选择']").each(function () {
+                $(this).attr("checked", !this.checked);
+            })
+            summoney()
+        });
+        $(".select").click(function(){
+            summoney()
+        })
+    });
+    var summoney=function(){
+        var money=document.getElementById("shopcat");
+        console.log(money);
+        var selects=money.getElementsByClassName("select");
+        var good=money.getElementsByClassName("goods");
+        var total=0;
+        for(var i=0;i<selects.length;i++){
+        if(selects[i].checked==true){
+            var go=good[i];
+            var prices=go.getElementsByClassName("goodsprice");
+            var t=parseFloat(prices[0].innerText.substr(1,4));
+            if(t)total+=t;
+        }
+        }
+        document.getElementById("money").innerHTML=total
+    };
+    window.onload=function(){
+        summoney();
+    }
+</script>
 </html>
